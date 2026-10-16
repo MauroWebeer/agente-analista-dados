@@ -14,11 +14,12 @@ def obter_llm(temperatura: float = 0.0) -> ChatGroq:
     if not api_key:
         raise ValueError("A variável GROQ_API_KEY não foi encontrada no arquivo .env!")
 
-    # Instancia o modelo Groq com temperatura 0 para maior determinismo no SQL
+    # Instancia o modelo Groq com max_tokens para respeitar o limite de OTPM do tier gratuito
     llm = ChatGroq(
         model="qwen/qwen3.8-27b",
         temperature=temperatura,
-        api_key=api_key
+        api_key=api_key,
+        max_tokens=800  # Limita a resposta para ficar abaixo do teto de 1000 tokens do Groq
     )
     
     return llm
