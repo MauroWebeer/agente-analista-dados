@@ -6,3 +6,4 @@ sqlalchemy==2.0.38
 langfuse==2.56.0
 python-dotenv==1.0.1
 pydantic==2.10.6
+langchain-community==0.3.17
