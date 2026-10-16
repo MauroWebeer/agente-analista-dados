@@ -33,7 +33,7 @@ agente-analista-dados/
 
 ### 1. Clonar o Repositório
 ```bash
-git clone [https://github.com/SEU_USUARIO/agente-analista-dados.git](https://github.com/SEU_USUARIO/agente-analista-dados.git)
+git clone []
 cd agente-analista-dados
 
 ```
@@ -94,10 +94,10 @@ python -m src.agente
                         │
          ┌──────────────┴──────────────┐
          ▼                             ▼
- ┌──────────────┐              ┌───────────────┐
- │  ChatGroq    │              │   LangFuse    │
- │ (LLM Qwen)   │              │ (Observabilidade & Tracing)
- └──────────────┘              └───────────────┘
+ ┌──────────────┐              ┌──────────────────────────────┐
+ │  ChatGroq    │              │          LangFuse            │
+ │ (LLM Qwen)   │              │ (Observabilidade & Tracing)  │
+ └──────────────┘              └──────────────────────────────┘
          │
          │ (Gera e valida query SQL)
          ▼
